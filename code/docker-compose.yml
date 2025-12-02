@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: 'my-sql-v1'
+    restart: always
+    volumes:
+      - './db-scripts/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql'
+    environment:
+      - MYSQL_ROOT_PASSWORD=elieta103
+    ports:
+      - '3306:3306'
+  mongodb:
+    image: mongo:8.0.8
+    restart: always
+    container_name: mongodb-v1
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 12345678
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db-scripts/mongo-db/mongo-init.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    network_mode: bridge
+
+
+
+

@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    service-url:
+      #defaultZone: ${EUREKA_SERVER_ADDRESS}
+      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    username: ${SPRING_DATASOURCE_USERNAME}

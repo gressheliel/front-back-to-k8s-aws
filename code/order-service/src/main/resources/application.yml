@@ -1,0 +1,16 @@
+server:
+  port: 9094
+
+spring:
+  profiles:
+    active: aws
+  application:
+    name: ORDER-SERVICE
+
+logging:
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
+
+user:
+  service:
+    url: http://USER-SERVICE/user/fetchUserById/
