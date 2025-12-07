@@ -1,4 +1,4 @@
-## Creación de una instancia EC2 para SonarQube
+## Creación de una instancia EC2 para SonarQube y Jenkins
 - Crear una instancia EC2 en AWS con las siguientes especificaciones:
   - Región: us-east-1 (Norte de Virginia)
   - Tipo de instancia: t2.large
@@ -106,14 +106,19 @@
 			</plugin>
 
 ```
-## Ejecutar el analisis de codigo statico con SonarQube 
+## Ejecutar el análisis de código estático con SonarQube 
+- Verificar las version de JAVA, MAVEN y JACOCO instaladas (https://howtodoinjava.com/maven/release-version-not-supported/)
+  - java -version  :  java version "21.0.4" 2024-07-16 LTS,  (Desde la terminal)
+  - mvn -version   : Apache Maven 3.8.6, (Desde la terminal)
+  - jacoco-maven-plugin : 0.8.11 (Desde el pom.xml)
+  
 - Ejecutar el siguiente comando Maven en la terminal dentro del directorio del proyecto Maven:
 - .../front-back-to-k8s-aws/code/restaurant-service
 ```
 mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.host.url=http://3.82.59.116:9000 -Dsonar.login=squ_fab382c024ee0fa5f18d35d62fa158811aca7f29
 ```
 
-## Resultado del analisis en SonarQube
+## Resultado del análisis en SonarQube
 - Navegar a SonarQube en el navegador web usando la IP pública de la instancia EC2 y el puerto 9000 
 - (http://<EC2_PUBLIC_IP>:9000)
 - Iniciar sesión con las credenciales de administrador
