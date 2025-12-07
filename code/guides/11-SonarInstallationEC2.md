@@ -88,7 +88,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.8</version>
+				<version>0.8.11</version>
 				<executions>
 					<execution>
 						<id>prepare-agent</id>
@@ -104,6 +104,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 
 ```
 ## Ejecutar el análisis de código estático con SonarQube 
