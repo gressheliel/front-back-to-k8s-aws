@@ -13,7 +13,9 @@
 - Guardar URL de Jenkins
 - Se accede a la Interfaz Web de Jenkins
 
-## Instalación de Plugins SSH
+## Instalación de Plugins SSH y MAVEN
+- Plugin de Maven es para la compilación, 
+- Plugin SSH es para la conexión segura a GitHub (Cuando se actualizan las versiones de las imágenes Docker en el repositorio GitOps)
 - Se instala el plugin SSH para permitir la conexión segura a servidores remotos desde Jenkins.
 - Buscar con la Lupa , que esta del lado derecho superior
 - Navegar a Manage Jenkins -> Plugins -> Available plugins -> Buscar SSH Agent -> Install without restart
