@@ -30,13 +30,14 @@
   - sudo yum install -y docker
   - sudo service docker start
   - sudo chkconfig docker on
-  - sudo usermod -aG docker ec2-user
+  - sudo usermod -aG docker ec2-user [permisos a ec2-user ó root]
   - docker version
   - Salir de la sesión SSH y volver a conectarse para aplicar los cambios de grupo.
 - Jenkins
   - sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
   - sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
   - sudo yum install -y jenkins
+  - sudo usermod -aG jenkins ec2-user [permisos a ec2-user ó root]
   - sudo systemctl enable jenkins
   - sudo systemctl start jenkins
 - Git

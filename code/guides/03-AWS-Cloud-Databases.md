@@ -7,7 +7,7 @@
 - Standard Create -> Engine type: MySQL -> Version: 8.0.42 -> Templates: Free tier
 - DB instance identifier: mysql-db-instance ->
 - Master username: admin -> Master password: elieta103 -> Confirm password: elieta103
-- Instance conﬁguration: DB instance class: db.t3.micro -> Storage: 20 GB
+- Instance configuration: DB instance class: db.t3.micro -> Storage: 20 GB
 - Connectivity: Don't connect to an EC2 compute resource
 - Public access: Yes -> 
 - Additional conﬁguration: Database port: 3306 -> Initial database name: restaurantdb
